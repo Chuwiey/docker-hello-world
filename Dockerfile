@@ -2,5 +2,5 @@ FROM node
 WORKDIR /app
 COPY . .
 RUN npm install
-EXPOSE 8080
-CMD ["npm", "start"]
+EXPOSE 80
+CMD ["DEBUG=express:*", "npm", "start"]
